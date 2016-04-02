@@ -51,26 +51,4 @@ defmodule Bees.Client do
     |> Map.put(:query, Plug.Conn.Query.encode(params))
     URI.to_string(uri)
   end
-
-  defp convert_binary_keys_to_atoms_in(list) do
-    Enum.map list, fn(inner_item) ->
-      case inner_item do
-        item when is_list(item) ->
-          convert_binary_keys_to_atoms_in item
-        { k, v } when is_list(v)  ->
-          { String.to_atom(k), convert_binary_keys_to_atoms_in(v) }
-        { k, v } ->
-          { String.to_atom(k), v }
-        unknown ->
-          unknown
-      end
-    end
-  end
-
-  ## HTTPoison overrides
-
-  #def process_response_body(body) do
-    #  decoded = :jsx.decode body
-    #convert_binary_keys_to_atoms_in(decoded)    
-    #end
 end
