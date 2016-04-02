@@ -12,9 +12,10 @@ defmodule Bees.Client do
   @user_agent "bees"
 
   def request(client, method, path, params, body, headers, authenticated) do
-    url = url(path, params)
-    headers = add_default_headers(client, headers, authenticated)
     params = add_default_parameters(client, params, authenticated)
+    headers = add_default_headers(client, headers, authenticated)
+
+    url = url(path, params)
     request(method, url, body, headers, [])
   end
 
@@ -34,15 +35,12 @@ defmodule Bees.Client do
 
   defp add_default_headers(client, headers, authenticated) do 
     headers = [user_agent_header()] ++ headers
-    if client && client.access_token && authenticated do
-      headers = [{"Authorization", "Bearer #{client.access_token}"}] ++ headers
-    end
-    headers
   end
 
   defp add_default_parameters(client, params, authenticated) do
+    params = [ client_id: client.client_id, client_secret: client.client_secret ] ++ params
     if authenticated do
-      params = [ client_id: client.client_id, client_secret: client.client_secret ]
+      params = [ oauth_token: client.access_token ] ++ params
     end
     params
   end
@@ -51,7 +49,11 @@ defmodule Bees.Client do
     {"User-Agent", "#{@user_agent}/#{Bees.version}"}
   end
 
-  defp url(path, :empty), do: "https://api.foursquare.com/v2/" <> path
+  defp authorization_header(token) do
+    {"Authorization", "Bearer #{token}"}
+  end
+
+  defp url(path, :empty), do: "https://api.foursquare.com/v2" <> path
   defp url(path, params) do
     uri =
     url(path, :empty)

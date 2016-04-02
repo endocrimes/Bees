@@ -13,7 +13,7 @@ defmodule Bees.Venue do
       limit: limit,
       v: "20160301"
     ]
-    case Bees.Client.get(client, "/venues/search", params, true) do
+    case Bees.Client.get(client, "/venues/search", params, false) do
       {:ok, %HTTPoison.Response{status_code: 200, body: body}} ->
         response = decode(body)
         {:ok,  response["response"]["venues"]}

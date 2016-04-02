@@ -1,0 +1,39 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "User-Agent": "bees/0.0.1"
+      },
+      "method": "post",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.foursquare.com/v2/checkins/add?oauth_token=ACCESS_TOKEN&client_id=CLIENT_ID&client_secret=CLIENT_SECRET&venueId=501fea4de4b05e0d96afc368&broadcast=public&shout=This+is+a+test&v=20160301"
+    },
+    "response": {
+      "body": "{\"meta\":{\"code\":200,\"requestId\":\"570013b0498ea31a693123b6\"},\"notifications\":[{\"type\":\"notificationTray\",\"item\":{\"unreadCount\":1}}],\"response\":{\"checkin\":{\"id\":\"56ffefae498eca36ecb77134\",\"createdAt\":1459613614,\"type\":\"checkin\",\"entities\":[],\"shout\":\"This is a test\",\"timeZoneOffset\":-300,\"user\":{\"id\":\"41208569\",\"firstName\":\"Daniel\",\"lastName\":\"Tomlinson\",\"gender\":\"female\",\"relationship\":\"self\",\"photo\":{\"prefix\":\"https:\\/\\/irs2.4sqi.net\\/img\\/user\\/\",\"suffix\":\"\\/41208569-CTQW3VDF1GR4XJAH.jpg\"}},\"venue\":{\"id\":\"501fea4de4b05e0d96afc368\",\"name\":\"Pergamino Café\",\"contact\":{},\"location\":{\"address\":\"Cra 37\",\"crossStreet\":\"8a - 37\",\"lat\":6.208296872359921,\"lng\":-75.56701837038496,\"cc\":\"CO\",\"city\":\"Medellín\",\"state\":\"Antioquia\",\"country\":\"Colombia\",\"formattedAddress\":[\"Cra 37 (8a - 37)\",\"Medellín, Antioquia\"]},\"categories\":[{\"id\":\"4bf58dd8d48988d16d941735\",\"name\":\"Café\",\"pluralName\":\"Cafés\",\"shortName\":\"Café\",\"icon\":{\"prefix\":\"https:\\/\\/ss3.4sqi.net\\/img\\/categories_v2\\/food\\/cafe_\",\"suffix\":\".png\"},\"primary\":true}],\"verified\":true,\"stats\":{\"checkinsCount\":3555,\"usersCount\":1507,\"tipCount\":123},\"url\":\"http:\\/\\/www.pergamino.co\",\"allowMenuUrlEdit\":true,\"venuePage\":{\"id\":\"88155346\"},\"reasons\":{\"count\":1,\"items\":[{\"summary\":\"You're here!\",\"type\":\"general\",\"reasonName\":\"hereNowReason\",\"target\":{\"type\":\"navigation\",\"object\":{\"id\":\"570013b0cd10ea5f8d62da6f\",\"type\":\"checkinDetail\",\"target\":{\"type\":\"path\",\"url\":\"\\/checkins\\/56ffefae498eca36ecb77134\"},\"ignorable\":false}}}]},\"saves\":{\"count\":1,\"groups\":[]}},\"source\":{\"name\":\"Swarm for iOS\",\"url\":\"https:\\/\\/www.swarmapp.com\"},\"photos\":{\"count\":0,\"items\":[]},\"posts\":{\"count\":0,\"textCount\":0},\"likes\":{\"count\":0,\"groups\":[]},\"like\":false,\"comments\":{\"count\":0,\"items\":[]},\"isMayor\":false,\"score\":{\"total\":1,\"scores\":[{\"icon\":\"https:\\/\\/ss1.4sqi.net\\/img\\/points\\/coin_icon_bulb.png\",\"message\":\"Fun Fact! Tears won't flow in zero gravity so you can't cry in space. So next time you're sad, just hop in that rocketship of yours!\",\"points\":1}]}},\"notifications\":[{\"type\":\"message\",\"item\":{\"message\":\"You've been here 3 times!\",\"entities\":[{\"indices\":[17,18],\"type\":\"count\",\"value\":3}]},\"alert\":false},{\"type\":\"insights\",\"item\":{\"insights\":{\"count\":1,\"items\":[{\"type\":\"pointsReward\",\"image\":\"https:\\/\\/ss1.4sqi.net\\/img\\/points\\/coin_icon_bulb_120.png\",\"title\":\"Fun Fact! Tears won't flow in zero gravity so you can't cry in space. So next time you're sad, just hop in that rocketship of yours!\",\"shareable\":false,\"points\":{\"image\":{\"prefix\":\"https:\\/\\/ss1.4sqi.net\\/img\\/points\\/coin_icon_bulb_\",\"sizes\":[80,120],\"name\":\".png\",\"key\":\"bulb\"},\"message\":\"Fun Fact! Tears won't flow in zero gravity so you can't cry in space. So next time you're sad, just hop in that rocketship of yours!\",\"points\":1}}]}},\"alert\":true}],\"notificationsOrder\":[\"special\",\"score\",\"leaderboard\",\"replies\"]}}",
+      "headers": {
+        "Server": "nginx",
+        "Content-Type": "application/json; charset=utf-8",
+        "Access-Control-Allow-Origin": "*",
+        "Tracer-Time": "85",
+        "X-RateLimit-Path": "/v2/checkins/add",
+        "X-RateLimit-Limit": "500",
+        "X-RateLimit-Remaining": "497",
+        "Strict-Transport-Security": "max-age=31536000",
+        "X-ex": "fastly_cdn",
+        "Content-Length": "2840",
+        "Accept-Ranges": "bytes",
+        "Date": "Sat, 02 Apr 2016 18:47:12 GMT",
+        "Via": "1.1 varnish",
+        "Connection": "keep-alive",
+        "X-Served-By": "cache-mia1326-MIA",
+        "X-Cache": "MISS",
+        "X-Cache-Hits": "0",
+        "Vary": "Accept-Encoding,User-Agent,Accept-Language"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]
