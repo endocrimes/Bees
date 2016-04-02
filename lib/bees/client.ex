@@ -49,10 +49,6 @@ defmodule Bees.Client do
     {"User-Agent", "#{@user_agent}/#{Bees.version}"}
   end
 
-  defp authorization_header(token) do
-    {"Authorization", "Bearer #{token}"}
-  end
-
   defp url(path, :empty), do: "https://api.foursquare.com/v2" <> path
   defp url(path, params) do
     uri =
