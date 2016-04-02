@@ -1,0 +1,40 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "Authorization": "Bearer ACCESS_TOKEN",
+        "User-Agent": "bees/0.0.1"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.foursquare.com/v2//venues/search?ll=55.2%2C44.1&intent=checkin&radius=800&limit=1&client_id=CLIENT_ID&client_secret=CLIENT_SECRET&v=20160301"
+    },
+    "response": {
+      "body": "{\"meta\":{\"code\":200,\"requestId\":\"57000015498ecbf0f25362dc\"},\"response\":{\"venues\":[{\"id\":\"4e91a7ed93adc15b6282d00f\",\"name\":\"Шатки\",\"contact\":{},\"location\":{\"lat\":55.18986171976957,\"lng\":44.11859534638753,\"distance\":1633,\"cc\":\"RU\",\"country\":\"Россия\",\"formattedAddress\":[\"Россия\"]},\"categories\":[{\"id\":\"50aa9e094b90af0d42d5de0d\",\"name\":\"City\",\"pluralName\":\"Cities\",\"shortName\":\"City\",\"icon\":{\"prefix\":\"https:\\/\\/ss3.4sqi.net\\/img\\/categories_v2\\/parks_outdoors\\/neighborhood_\",\"suffix\":\".png\"},\"primary\":true}],\"verified\":false,\"stats\":{\"checkinsCount\":594,\"usersCount\":395,\"tipCount\":5},\"specials\":{\"count\":0,\"items\":[]},\"hereNow\":{\"count\":0,\"summary\":\"Nobody here\",\"groups\":[]},\"referralId\":\"v-1459617813\",\"venueChains\":[]}],\"confident\":true}}",
+      "headers": {
+        "Server": "nginx",
+        "Content-Type": "application/json; charset=utf-8",
+        "Access-Control-Allow-Origin": "*",
+        "Tracer-Time": "34",
+        "X-RateLimit-Path": "/v2/venues/search",
+        "X-RateLimit-Limit": "5000",
+        "X-RateLimit-Remaining": "4996",
+        "Strict-Transport-Security": "max-age=31536000",
+        "X-ex": "fastly_cdn",
+        "Content-Length": "759",
+        "Accept-Ranges": "bytes",
+        "Date": "Sat, 02 Apr 2016 17:23:33 GMT",
+        "Via": "1.1 varnish",
+        "Connection": "keep-alive",
+        "X-Served-By": "cache-mia1326-MIA",
+        "X-Cache": "MISS",
+        "X-Cache-Hits": "0",
+        "Vary": "Accept-Encoding,User-Agent,Accept-Language"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]
