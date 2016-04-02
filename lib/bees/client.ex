@@ -11,32 +11,40 @@ defmodule Bees.Client do
 
   @user_agent "bees"
 
-  def request(client, method, path, params, body, headers) do
+  def request(client, method, path, params, body, headers, authenticated) do
     url = url(path, params)
-    headers = add_default_headers(client, headers)
+    headers = add_default_headers(client, headers, authenticated)
+    params = add_default_parameters(client, params, authenticated)
     request(method, url, body, headers, [])
   end
 
-  def get(client, path, params \\ :empty) do
-    request(client, :get, path, params, "", [])
+  def get(client, path, params \\ :empty, authenticated \\ false) do
+    request(client, :get, path, params, "", [], authenticated)
   end
 
-  def post(client, path, body, params \\ :empty) do
-    request(client, :post, path, params, body, [])
+  def post(client, path, body, params \\ :empty, authenticated \\ false) do
+    request(client, :post, path, params, body, [], authenticated)
   end
 
-  def delete(client, path, params \\ :empty) do
-    request(client, :delete, path, params, "", [])
+  def delete(client, path, params \\ :empty, authenticated \\ false) do
+    request(client, :delete, path, params, "", [], authenticated)
   end
 
   # Private Helpers
 
-  defp add_default_headers(client, headers) do 
+  defp add_default_headers(client, headers, authenticated) do 
     headers = [user_agent_header()] ++ headers
-    if client && client.access_token do
+    if client && client.access_token && authenticated do
       headers = [{"Authorization", "Bearer #{client.access_token}"}] ++ headers
     end
     headers
+  end
+
+  defp add_default_parameters(client, params, authenticated) do
+    if authenticated do
+      params = [ client_id: client.client_id, client_secret: client.client_secret ]
+    end
+    params
   end
 
   defp user_agent_header() do

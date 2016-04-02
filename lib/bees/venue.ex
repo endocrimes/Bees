@@ -11,11 +11,9 @@ defmodule Bees.Venue do
       intent: intent,
       radius: radius,
       limit: limit,
-      client_id: client.client_id,
-      client_secret: client.client_secret,
       v: "20160301"
     ]
-    case Bees.Client.get(client, "/venues/search", params) do
+    case Bees.Client.get(client, "/venues/search", params, true) do
       {:ok, %HTTPoison.Response{status_code: 200, body: body}} ->
         response = decode(body)
         {:ok,  response["response"]["venues"]}
