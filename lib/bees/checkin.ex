@@ -19,7 +19,32 @@ defmodule Bees.Checkin do
     end
   end
 
+  def for_self(client) do
+    params = [
+      v: "20160301"
+    ]
+    case Bees.Client.get(client, "/users/self/checkins", params, true) do
+      {:ok, %HTTPoison.Response{body: body} } ->
+        checkins = decode_many(body)
+        { :ok, checkins["response"]["checkins"]["items"] }
+      {:error, error } ->
+        { :error, error }
+    end
+  end
+
   # Private Helpers
+
+  defp decode_many(body) do
+    mapping = %{
+      "response" => %{
+        "checkins" => %{
+          "items" => [%Bees.Checkin{ venue: %Bees.Venue{} }]
+        }
+      }
+    }
+
+   Poison.decode!(body, as: mapping)
+  end
 
   defp decode(body) do
     mapping = %{

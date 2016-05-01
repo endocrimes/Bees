@@ -27,4 +27,12 @@ defmodule CheckinTest do
       assert body.shout == "This is a test"
     end
   end
+
+  test "retreive checkins for a user" do
+    use_cassette "user_checkins" do
+      {status, body} = Bees.Checkin.for_self(client)
+      assert status == :ok
+      assert body != nil
+    end
+  end
 end
