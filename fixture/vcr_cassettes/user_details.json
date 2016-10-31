@@ -1,0 +1,39 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "User-Agent": "bees/0.0.1"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.foursquare.com/v2/users/self?oauth_token=ACCESS_TOKEN&client_id=CLIENT_ID&client_secret=CLIENT_SECRET&v=20160301"
+    },
+    "response": {
+      "body": "{ \"meta\": { \"code\": 200, \"requestId\": \"58172093f594df08530d89ec\" }, \"notifications\": [ { \"type\": \"notificationTray\", \"item\": { \"unreadCount\": 0 } } ], \"response\": { \"user\": { \"id\": \"fake-id\", \"firstName\": \"random-user\", \"gender\": \"male\", \"relationship\": \"self\", \"canonicalUrl\": \"https:\\/\\/foursquare.com\\/user\\/fake-id\", \"photo\": { \"prefix\": \"https:\\/\\/irs0.4sqi.net\\/img\\/user\\/\", \"suffix\": \"\\/-ZV4JKCKJHIT5GM54.png\" }, \"friends\": { \"count\": 0, \"groups\": [ { \"type\": \"friends\", \"name\": \"Mutual friends\", \"count\": 0, \"items\": [] }, { \"type\": \"others\", \"name\": \"Other friends\", \"count\": 0, \"items\": [] } ] }, \"birthday\": 1, \"isAnonymous\": false, \"tips\": { \"count\": 0 }, \"homeCity\": \"\", \"bio\": \"randombio\", \"contact\": { \"verifiedPhone\": \"false\", \"email\": \"fake@email.com\" }, \"photos\": { \"count\": 0, \"items\": [] }, \"checkinPings\": \"off\", \"pings\": false, \"type\": \"user\", \"mayorships\": { \"count\": 0, \"items\": [] }, \"checkins\": { \"count\": 0, \"items\": [ ] }, \"requests\": { \"count\": 0 }, \"lists\": { \"count\": 0, \"groups\": [ ] }, \"blockedStatus\": \"none\", \"createdAt\": 1403973056, \"lenses\": [], \"referralId\": \"u-fake-id\" } } }",
+      "headers": {
+        "Server": "nginx",
+        "Content-Type": "application/json; charset=utf-8",
+        "Access-Control-Allow-Origin": "*",
+        "Tracer-Time": "39",
+        "X-RateLimit-Path": "/v2/users/X",
+        "X-RateLimit-Limit": "500",
+        "X-RateLimit-Remaining": "499",
+        "Strict-Transport-Security": "max-age=31536000",
+        "X-ex": "fastly_cdn",
+        "Content-Length": "3983",
+        "Accept-Ranges": "bytes",
+        "Date": "Mon, 31 Oct 2016 10:44:35 GMT",
+        "Via": "1.1 varnish",
+        "Connection": "keep-alive",
+        "X-Served-By": "cache-cdg8731-CDG",
+        "X-Cache": "MISS",
+        "X-Cache-Hits": "0",
+        "Vary": "Accept-Encoding,User-Agent,Accept-Language"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]
