@@ -4,7 +4,7 @@ defmodule Bees.Mixfile do
   def project do
     [
       app: :bees,
-      version: "0.0.2",
+      version: "0.1.0",
       description: "Foursquare API client for Elixir",
       elixir: "~> 1.2",
       package: package,
