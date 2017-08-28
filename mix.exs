@@ -28,10 +28,10 @@ defmodule Bees.Mixfile do
 
   defp deps do
     [
-      {:httpoison, "~> 0.8.0"},
+      {:httpoison, "~> 0.11.0"},
       {:jsx, "~> 2.6"},
       {:plug, "~> 1.0"},
-      {:poison, "~> 2.0"},
+      {:poison, "~> 3.0"},
       {:exvcr, "~> 0.7", only: :test}
     ]
   end
