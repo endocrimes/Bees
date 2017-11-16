@@ -1,0 +1,39 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "User-Agent": "bees/0.1.0"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.foursquare.com/v2/venues/510d6edfe4b0d7e116e6d1e0/photos?client_id=CLIENT_ID&client_secret=CLIENT_SECRET&limit=1&offset=1&v=20160301"
+    },
+    "response": {
+      "body": "{\"meta\":{\"code\":200,\"requestId\":\"59a43bae4434b9555afa5d3a\"},\"response\":{\"photos\":{\"count\":1,\"items\":[{\"id\":\"58012834d67ce59c2758cbad\",\"createdAt\":1476470836,\"source\":{\"name\":\"Yext Yext\",\"url\":\"http:\\/\\/yext.com\"},\"prefix\":\"https:\\/\\/igx.4sqi.net\\/img\\/general\\/\",\"suffix\":\"\\/87388367_pScNo0C-DX8cMVBgNYM2BzBfrgEA6_CpOIhPF7ezONM.jpg\",\"width\":619,\"height\":330,\"user\":{\"id\":\"87388367\",\"firstName\":\"Yext\",\"lastName\":\"Yext\",\"gender\":\"none\",\"photo\":{\"prefix\":\"https:\\/\\/igx.4sqi.net\\/img\\/user\\/\",\"suffix\":\"\\/blank_boy.png\",\"default\":true}},\"visibility\":\"public\"}],\"dupesRemoved\":0}}}",
+      "headers": {
+        "Server": "nginx",
+        "Content-Type": "application/json; charset=utf-8",
+        "Access-Control-Allow-Origin": "*",
+        "Tracer-Time": "18",
+        "X-RateLimit-Path": "/v2/venues/X/photos",
+        "X-RateLimit-Limit": "5000",
+        "X-RateLimit-Remaining": "4989",
+        "Strict-Transport-Security": "max-age=31536000",
+        "X-ex": "fastly_cdn",
+        "Content-Length": "578",
+        "Accept-Ranges": "bytes",
+        "Date": "Mon, 28 Aug 2017 15:50:06 GMT",
+        "Via": "1.1 varnish",
+        "Connection": "keep-alive",
+        "X-Served-By": "cache-bma7024-BMA",
+        "X-Cache": "MISS",
+        "X-Cache-Hits": "0",
+        "Vary": "Accept-Encoding,User-Agent,Accept-Language"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]
