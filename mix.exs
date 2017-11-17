@@ -4,7 +4,7 @@ defmodule Bees.Mixfile do
   def project do
     [
       app: :bees,
-      version: "0.1.0",
+      version: "0.2.0",
       description: "Foursquare API client for Elixir",
       elixir: "~> 1.2",
       package: package,
@@ -16,9 +16,9 @@ defmodule Bees.Mixfile do
 
   def package do
     [
-      maintainers: ["Daniel Tomlinson"],
+      maintainers: ["Danielle Tomlinson"],
       licenses: ["MIT"],
-      links: %{"GitHub" => "https://github.com/danieltomlinson/bees" }
+      links: %{"GitHub" => "https://github.com/dantoml/bees" }
     ]
   end
 
@@ -32,7 +32,8 @@ defmodule Bees.Mixfile do
       {:jsx, "~> 2.6"},
       {:plug, "~> 1.0"},
       {:poison, "~> 3.0"},
-      {:exvcr, "~> 0.7", only: :test}
+      {:exvcr, "~> 0.7", only: :test},
+      {:ex_doc, ">= 0.0.0", only: :dev}
     ]
   end
 end
