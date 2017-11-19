@@ -1,0 +1,39 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "User-Agent": "bees/0.1.0"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.foursquare.com/v2/venues/explore?client_id=CLIENT_ID&client_secret=CLIENT_SECRET&ll=55.2%2C44.1&section=trending&radius=800&limit=1&openNow=0&venuePhotos=1&v=20160301"
+    },
+    "response": {
+      "body": "{\"meta\":{\"code\":200,\"requestId\":\"5a11804ff594df63f1a08dc1\"},\"response\":{\"warning\":{\"text\":\"There aren't a lot of results near you. Try something more general, reset your filters, or expand the search area.\"},\"headerLocation\":\"Current map view\",\"headerFullLocation\":\"Current map view\",\"headerLocationGranularity\":\"unknown\",\"totalResults\":3,\"suggestedBounds\":{\"ne\":{\"lat\":55.20720000720001,\"lng\":44.11259224306136},\"sw\":{\"lat\":55.1927999928,\"lng\":44.087407756938646}},\"groups\":[{\"type\":\"Recommended Places\",\"name\":\"recommended\",\"items\":[{\"reasons\":{\"count\":0,\"items\":[{\"summary\":\"This spot is popular\",\"type\":\"general\",\"reasonName\":\"globalInteractionReason\"}]},\"venue\":{\"id\":\"521b109d11d2aaa45882b223\",\"name\":\"столовая \\\"стряпуха\\\"\",\"contact\":{},\"location\":{\"address\":\"У Завода Нормалей\",\"lat\":55.19731140136719,\"lng\":44.1041374206543,\"labeledLatLngs\":[{\"label\":\"display\",\"lat\":55.19731140136719,\"lng\":44.1041374206543}],\"distance\":398,\"cc\":\"RU\",\"city\":\"Шатки\",\"state\":\"Нижегородская обл.\",\"country\":\"Россия\",\"formattedAddress\":[\"У Завода Нормалей\",\"Шатки\",\"Россия\"]},\"categories\":[{\"id\":\"4bf58dd8d48988d128941735\",\"name\":\"Cafeteria\",\"pluralName\":\"Cafeterias\",\"shortName\":\"Cafeteria\",\"icon\":{\"prefix\":\"https:\\/\\/ss3.4sqi.net\\/img\\/categories_v2\\/education\\/cafeteria_\",\"suffix\":\".png\"},\"primary\":true}],\"verified\":false,\"stats\":{\"checkinsCount\":2,\"usersCount\":2,\"tipCount\":0},\"venueRatingBlacklisted\":true,\"allowMenuUrlEdit\":true,\"beenHere\":{\"count\":0,\"marked\":false,\"lastCheckinExpiredAt\":0},\"photos\":{\"count\":1,\"groups\":[{\"type\":\"venue\",\"name\":\"Venue photos\",\"count\":1,\"items\":[{\"id\":\"521b13ea498e58df3ae84453\",\"createdAt\":1377506282,\"prefix\":\"https:\\/\\/igx.4sqi.net\\/img\\/general\\/\",\"suffix\":\"\\/29197794_nlGnHRWy7ilQ2snP17M0OqGC0rNiK_0uiCUyrdOKtnE.jpg\",\"width\":960,\"height\":720,\"user\":{\"id\":\"29197794\",\"firstName\":\"Елена\",\"lastName\":\"Стасова\",\"gender\":\"female\",\"photo\":{\"prefix\":\"https:\\/\\/igx.4sqi.net\\/img\\/user\\/\",\"suffix\":\"\\/KS2F1IIPCRCNLCPK.jpg\"}},\"visibility\":\"public\"}]}]},\"hereNow\":{\"count\":0,\"summary\":\"Nobody here\",\"groups\":[]},\"featuredPhotos\":{\"count\":1,\"items\":[{\"id\":\"521b13ea498e58df3ae84453\",\"createdAt\":1377506282,\"prefix\":\"https:\\/\\/igx.4sqi.net\\/img\\/general\\/\",\"suffix\":\"\\/29197794_nlGnHRWy7ilQ2snP17M0OqGC0rNiK_0uiCUyrdOKtnE.jpg\",\"width\":960,\"height\":720,\"user\":{\"id\":\"29197794\",\"firstName\":\"Елена\",\"lastName\":\"Стасова\",\"gender\":\"female\",\"photo\":{\"prefix\":\"https:\\/\\/igx.4sqi.net\\/img\\/user\\/\",\"suffix\":\"\\/KS2F1IIPCRCNLCPK.jpg\"}},\"visibility\":\"public\"}]}},\"referralId\":\"e-9-521b109d11d2aaa45882b223-0\"}]}]}}",
+      "headers": {
+        "Server": "nginx",
+        "Content-Type": "application/json; charset=utf-8",
+        "Access-Control-Allow-Origin": "*",
+        "Tracer-Time": "40",
+        "X-RateLimit-Path": "/v2/venues/explore",
+        "X-RateLimit-Limit": "5000",
+        "X-RateLimit-Remaining": "4984",
+        "Strict-Transport-Security": "max-age=31536000",
+        "X-ex": "fastly_cdn",
+        "Content-Length": "2637",
+        "Accept-Ranges": "bytes",
+        "Date": "Sun, 19 Nov 2017 13:00:00 GMT",
+        "Via": "1.1 varnish",
+        "Connection": "keep-alive",
+        "X-Served-By": "cache-hkg17930-HKG",
+        "X-Cache": "MISS",
+        "X-Cache-Hits": "0",
+        "Vary": "Accept-Encoding,User-Agent,Accept-Language"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]
