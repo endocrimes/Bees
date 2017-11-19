@@ -1,0 +1,39 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "User-Agent": "bees/0.1.0"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.foursquare.com/v2/venues/explore?client_id=CLIENT_ID&client_secret=CLIENT_SECRET&ll=55.2%2C44.1&section=topPicks&radius=800&limit=1&openNow=0&venuePhotos=0&v=20160301"
+    },
+    "response": {
+      "body": "{\"meta\":{\"code\":200,\"requestId\":\"5a118050db04f567836b060a\"},\"response\":{\"warning\":{\"text\":\"There aren't a lot of results near you. Try something more general, reset your filters, or expand the search area.\"},\"headerLocation\":\"Current map view\",\"headerFullLocation\":\"Current map view\",\"headerLocationGranularity\":\"unknown\",\"totalResults\":2,\"suggestedBounds\":{\"ne\":{\"lat\":55.20720000720001,\"lng\":44.11259224306136},\"sw\":{\"lat\":55.1927999928,\"lng\":44.087407756938646}},\"groups\":[{\"type\":\"Recommended Places\",\"name\":\"recommended\",\"items\":[{\"reasons\":{\"count\":0,\"items\":[{\"summary\":\"This spot is popular\",\"type\":\"general\",\"reasonName\":\"globalInteractionReason\"}]},\"venue\":{\"id\":\"4fc897cae4b06803693b5f6d\",\"name\":\"Астория Кафе\",\"contact\":{},\"location\":{\"lat\":55.198983234114934,\"lng\":44.100467131957366,\"labeledLatLngs\":[{\"label\":\"display\",\"lat\":55.198983234114934,\"lng\":44.100467131957366}],\"distance\":117,\"cc\":\"RU\",\"country\":\"Россия\",\"formattedAddress\":[\"Россия\"]},\"categories\":[{\"id\":\"4bf58dd8d48988d1c7941735\",\"name\":\"Snack Place\",\"pluralName\":\"Snack Places\",\"shortName\":\"Snacks\",\"icon\":{\"prefix\":\"https:\\/\\/ss3.4sqi.net\\/img\\/categories_v2\\/food\\/snacks_\",\"suffix\":\".png\"},\"primary\":true}],\"verified\":false,\"stats\":{\"checkinsCount\":56,\"usersCount\":21,\"tipCount\":5},\"price\":{\"tier\":1,\"message\":\"Cheap\",\"currency\":\"\\u20bd\"},\"allowMenuUrlEdit\":true,\"beenHere\":{\"count\":0,\"marked\":false,\"lastCheckinExpiredAt\":0},\"photos\":{\"count\":0,\"groups\":[]},\"hereNow\":{\"count\":0,\"summary\":\"Nobody here\",\"groups\":[]}},\"tips\":[{\"id\":\"52e3fb4a11d21626e62674a8\",\"createdAt\":1390672714,\"text\":\"Холодно внизу здесь зимой, особенно в туалете. И шашлык не дожаривают. А остальное норм. А еще официанта внизу не дождешься. Гуляйте в основном зале.\",\"type\":\"user\",\"canonicalUrl\":\"https:\\/\\/foursquare.com\\/item\\/52e3fb4a11d21626e62674a8\",\"likes\":{\"count\":1,\"groups\":[],\"summary\":\"1 like\"},\"logView\":true,\"agreeCount\":1,\"disagreeCount\":0,\"todo\":{\"count\":0},\"user\":{\"id\":\"75386591\",\"firstName\":\"Дмитрий\",\"lastName\":\"Светанков\",\"gender\":\"male\",\"photo\":{\"prefix\":\"https:\\/\\/igx.4sqi.net\\/img\\/user\\/\",\"suffix\":\"\\/75386591-S11RSP5QX5BDFTH2.jpg\"}}}],\"referralId\":\"e-1-4fc897cae4b06803693b5f6d-0\"}]}]}}",
+      "headers": {
+        "Server": "nginx",
+        "Content-Type": "application/json; charset=utf-8",
+        "Access-Control-Allow-Origin": "*",
+        "Tracer-Time": "45",
+        "X-RateLimit-Path": "/v2/venues/explore",
+        "X-RateLimit-Limit": "5000",
+        "X-RateLimit-Remaining": "4983",
+        "Strict-Transport-Security": "max-age=31536000",
+        "X-ex": "fastly_cdn",
+        "Content-Length": "2327",
+        "Accept-Ranges": "bytes",
+        "Date": "Sun, 19 Nov 2017 13:00:00 GMT",
+        "Via": "1.1 varnish",
+        "Connection": "keep-alive",
+        "X-Served-By": "cache-hkg17930-HKG",
+        "X-Cache": "MISS",
+        "X-Cache-Hits": "0",
+        "Vary": "Accept-Encoding,User-Agent,Accept-Language"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]
