@@ -1,0 +1,39 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "User-Agent": "bees/0.1.0"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.foursquare.com/v2/venues/search?client_id=CLIENT_ID&client_secret=CLIENT_SECRET&ll=14.58%2C121.05&categoryId=4bf58dd8d48988d1e0931735&intent=browse&limit=1&radius=800&v=20160301"
+    },
+    "response": {
+      "body": "{\"meta\":{\"code\":200,\"requestId\":\"5a118b2b4434b91bf68d13ae\"},\"response\":{\"venues\":[{\"id\":\"4ba83eacf964a52016d339e3\",\"name\":\"Starbucks Coffee\",\"contact\":{\"phone\":\"+6326389231\",\"formattedPhone\":\"+63 2 638 9231\",\"twitter\":\"starbucks\"},\"location\":{\"address\":\"Ground Flr, Shangri-La Plaza\",\"crossStreet\":\"at Shaw Blvd & Epifanio Delos Santos Ave\",\"lat\":14.581685144813564,\"lng\":121.05525844285461,\"labeledLatLngs\":[{\"label\":\"display\",\"lat\":14.581685144813564,\"lng\":121.05525844285461}],\"distance\":596,\"cc\":\"PH\",\"neighborhood\":\"Mandaluyong District 1\",\"city\":\"Mandaluyong City\",\"state\":\"Lungsod ng Mandaluyong\",\"country\":\"Pilipinas\",\"formattedAddress\":[\"Ground Flr, Shangri-La Plaza (at Shaw Blvd & Epifanio Delos Santos Ave)\",\"Mandaluyong City\",\"Lungsod ng Mandaluyong\",\"Pilipinas\"]},\"categories\":[{\"id\":\"4bf58dd8d48988d1e0931735\",\"name\":\"Coffee Shop\",\"pluralName\":\"Coffee Shops\",\"shortName\":\"Coffee Shop\",\"icon\":{\"prefix\":\"https:\\/\\/ss3.4sqi.net\\/img\\/categories_v2\\/food\\/coffeeshop_\",\"suffix\":\".png\"},\"primary\":true}],\"verified\":false,\"stats\":{\"checkinsCount\":10885,\"usersCount\":5096,\"tipCount\":70},\"url\":\"http:\\/\\/philippines.starbucks.com\",\"allowMenuUrlEdit\":true,\"beenHere\":{\"lastCheckinExpiredAt\":0},\"specials\":{\"count\":0,\"items\":[]},\"referralId\":\"v-1511099179\",\"venueChains\":[{\"id\":\"556f676fbd6a75a99038d8ec\"}],\"hasPerk\":false}]}}",
+      "headers": {
+        "Server": "nginx",
+        "Content-Type": "application/json; charset=utf-8",
+        "Access-Control-Allow-Origin": "*",
+        "Tracer-Time": "25",
+        "X-RateLimit-Path": "/v2/venues/search",
+        "X-RateLimit-Limit": "5000",
+        "X-RateLimit-Remaining": "4995",
+        "Strict-Transport-Security": "max-age=31536000",
+        "X-ex": "fastly_cdn",
+        "Content-Length": "1332",
+        "Accept-Ranges": "bytes",
+        "Date": "Sun, 19 Nov 2017 13:46:19 GMT",
+        "Via": "1.1 varnish",
+        "Connection": "keep-alive",
+        "X-Served-By": "cache-hkg17932-HKG",
+        "X-Cache": "MISS",
+        "X-Cache-Hits": "0",
+        "Vary": "Accept-Encoding,User-Agent,Accept-Language"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]
