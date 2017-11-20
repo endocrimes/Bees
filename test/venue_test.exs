@@ -31,4 +31,26 @@ defmodule VenueTest do
       assert body.id == "501fea4de4b05e0d96afc368"
     end
   end
+
+  test "by recommendations" do
+    use_cassette "venue_by_recommendations" do
+      {status,
+        [%{"type" => type, "name" => name, "items" => items}]
+      } = Bees.Venue.explore(client, 55.2, 44.1, 1, "topPicks")
+
+      assert status == :ok
+      assert type == "Recommended Places"
+      assert name == "recommended"
+      assert Enum.count(items) > 0
+    end
+  end
+
+  test "by recommendations with venue photos" do
+    use_cassette "venue_by_recommendations_with_photos" do
+      {status, [%{"items" => items}]} = Bees.Venue.explore(client, 55.2, 44.1, 1, "trending", 0, 1)
+      [%{"venue" => %{"photos" => %{"count" => count}}}] = items
+
+      assert count > 0
+    end
+  end
 end

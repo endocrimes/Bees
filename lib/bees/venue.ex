@@ -36,6 +36,26 @@ defmodule Bees.Venue do
     end
   end
 
+  def explore(client, latitude, longitude, limit \\ 50, section \\ "topPicks", open_now \\ 0, venue_photos \\ 0, radius \\ 800) do
+    params = [
+      ll: "#{latitude},#{longitude}",
+      section: section,
+      radius: radius,
+      limit: limit,
+      openNow: open_now,
+      venuePhotos: venue_photos,
+      v: "20160301"
+    ]
+
+    case Bees.Client.get(client, "/venues/explore", params, false) do
+      {:ok, %HTTPoison.Response{status_code: 200, body: body}} ->
+        response = decode_many(body)
+        {:ok,  response["response"]["groups"]}
+      {:error, error} ->
+        {:error, error}
+    end
+  end
+
   # Private Helpers
 
   defp decode_many(body) do
