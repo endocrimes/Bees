@@ -1,11 +1,32 @@
 version: 2
-jobs:
-  build:
-    docker:
-      - image: elixir:latest
+
+workflows:
+  version: 2
+  build_test_all:
+    jobs:
+      - build
+      - build_1_4
+      - build_1_3
+
+references:
+  - &build_test_steps
     steps:
       - checkout
       - run: mix local.hex --force
       - run: mix local.rebar
       - run: mix deps.get
       - run: mix test
+
+jobs:
+  build_1_3:
+    <<: *build_test_steps
+    docker:
+      - image: elixir:1.3
+  build_1_4:
+    <<: *build_test_steps
+    docker:
+      - image: elixir:1.4
+  build:
+    <<: *build_test_steps
+    docker:
+      - image: elixir:latest
