@@ -50,6 +50,7 @@ defmodule VenueTest do
       {status, [%{"items" => items}]} = Bees.Venue.explore(client(), 55.2, 44.1, 1, "trending", 0, 1)
       [%{"venue" => %{"photos" => %{"count" => count}}}] = items
 
+      assert status == :ok
       assert count > 0
     end
   end
