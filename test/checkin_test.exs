@@ -19,7 +19,7 @@ defmodule CheckinTest do
   test "check in with a correct venue identifier" do
     use_cassette "checkin" do
       venueId = "501fea4de4b05e0d96afc368"
-      {status, body} = Bees.Checkin.with_venue(client, %Bees.Venue{id: venueId}, "public", "This is a test")
+      {status, body} = Bees.Checkin.with_venue(client(), %Bees.Venue{id: venueId}, "public", "This is a test")
       assert status == :ok
       assert body != nil
       assert body.venue != nil
@@ -30,7 +30,7 @@ defmodule CheckinTest do
 
   test "retreive checkins for a user" do
     use_cassette "user_checkins" do
-      {status, body} = Bees.Checkin.for_self(client)
+      {status, body} = Bees.Checkin.for_self(client())
       assert status == :ok
       assert body != nil
     end
