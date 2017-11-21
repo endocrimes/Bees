@@ -38,11 +38,13 @@ defmodule Bees.Client do
   end
 
   defp add_default_parameters(client, params, authenticated) do
-    params = [ client_id: client.client_id, client_secret: client.client_secret ] ++ params
-    if authenticated do
-      params = [ oauth_token: client.access_token ] ++ params
-    end
-    params
+    client_params = [ client_id: client.client_id, client_secret: client.client_secret]
+    auth_params = if authenticated do
+                    [ oauth_token: client.access_token ] ++ client_params
+                  else
+                    client_params
+                  end
+    auth_params ++ params
   end
 
   defp user_agent_header() do
