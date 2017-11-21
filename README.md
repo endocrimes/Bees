@@ -9,7 +9,8 @@ Bees currently supports:
   1. Finding venues by lat/long `Bees.Venue.search/6`
   2. Finding venues by identifier `Bees.Venue.find_by_identifier/2`
   3. Finding venues by recommendations `Bees.Venue.explore/8`
-  4. Checking into a venue `Bees.Checkin.with_venue/4`
+  4. Finding venues by category `Bees.Venue.category/7`
+  5. Checking into a venue `Bees.Checkin.with_venue/4`
 
 Adding endpoints should be relatively simple, and I'm open to pull requests.
 

@@ -56,6 +56,25 @@ defmodule Bees.Venue do
     end
   end
 
+  def category(client, latitude, longitude, category, intent \\ "browse", limit \\ 50,  radius \\ 800) do
+    params = [
+      ll: "#{latitude},#{longitude}",
+      categoryId: category,
+      intent: intent,
+      limit: limit,
+      radius: radius,
+      v: "20160301"
+    ]
+
+    case Bees.Client.get(client, "/venues/search", params, false) do
+      {:ok, %HTTPoison.Response{status_code: 200, body: body}} ->
+        response = decode_many(body)
+        {:ok,  response["response"]["venues"]}
+      {:error, error} ->
+        {:error, error}
+    end
+  end
+
   # Private Helpers
 
   defp decode_many(body) do
