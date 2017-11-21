@@ -18,7 +18,7 @@ defmodule UserTest do
 
   test "retrieve details for a user" do
     use_cassette "user_details" do
-      {status, user} = Bees.User.details(client)
+      {status, user} = Bees.User.details(client())
 
       assert status == :ok
       assert user != nil

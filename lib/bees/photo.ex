@@ -26,7 +26,7 @@ defmodule Bees.Photo do
     mapping = %{
       "response" => %{
         "photos" => %{
-          "items" => [decoder]
+          "items" => [decoder()]
         }
       }
     }

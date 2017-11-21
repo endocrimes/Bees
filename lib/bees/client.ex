@@ -13,7 +13,7 @@ defmodule Bees.Client do
 
   def request(client, method, path, params, body, headers, authenticated) do
     params = add_default_parameters(client, params, authenticated)
-    headers = add_default_headers(client, headers, authenticated)
+    headers = add_default_headers(headers)
 
     url = url(path, params)
     request(method, url, body, headers, [])
@@ -33,16 +33,18 @@ defmodule Bees.Client do
 
   # Private Helpers
 
-  defp add_default_headers(client, headers, authenticated) do 
-    headers = [user_agent_header()] ++ headers
+  defp add_default_headers(headers) do
+    [user_agent_header()] ++ headers
   end
 
   defp add_default_parameters(client, params, authenticated) do
-    params = [ client_id: client.client_id, client_secret: client.client_secret ] ++ params
-    if authenticated do
-      params = [ oauth_token: client.access_token ] ++ params
-    end
-    params
+    client_params = [ client_id: client.client_id, client_secret: client.client_secret]
+    auth_params = if authenticated do
+                    [ oauth_token: client.access_token ] ++ client_params
+                  else
+                    client_params
+                  end
+    auth_params ++ params
   end
 
   defp user_agent_header() do
