@@ -32,7 +32,7 @@ defmodule Bees.Mixfile do
       {:jsx, "~> 2.6"},
       {:plug, "~> 1.0"},
       {:poison, "~> 3.0"},
-      {:exvcr, "~> 0.7", only: :test},
+      {:exvcr, "~> 0.8", only: :test},
       {:ex_doc, ">= 0.0.0", only: :dev}
     ]
   end
