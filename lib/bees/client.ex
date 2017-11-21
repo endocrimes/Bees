@@ -34,7 +34,7 @@ defmodule Bees.Client do
   # Private Helpers
 
   defp add_default_headers(headers) do
-    headers = [user_agent_header()] ++ headers
+    [user_agent_header()] ++ headers
   end
 
   defp add_default_parameters(client, params, authenticated) do
