@@ -54,4 +54,23 @@ defmodule VenueTest do
       assert count > 0
     end
   end
+
+  test "find by category" do
+    coffee_shops_category_id = "4bf58dd8d48988d1e0931735"
+    limit = 1
+
+    use_cassette "venue_by_category" do
+      {status, venues} = Bees.Venue.category(client,
+                                             14.58,
+                                             121.05,
+                                             coffee_shops_category_id,
+                                             "browse",
+                                             limit)
+      [%Bees.Venue{:categories => [%{"name" => category_name}]}] = venues
+
+      assert status == :ok
+      assert Enum.count(venues) > 0
+      assert category_name == "Coffee Shop"
+    end
+  end
 end
