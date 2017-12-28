@@ -28,7 +28,7 @@ defmodule CheckinTest do
     end
   end
 
-  test "retreive checkins for a user" do
+  test "retrieve checkins for a user" do
     use_cassette "user_checkins" do
       {status, body} = Bees.Checkin.for_self(client())
       assert status == :ok
