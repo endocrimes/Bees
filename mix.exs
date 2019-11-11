@@ -16,9 +16,9 @@ defmodule Bees.Mixfile do
 
   def package do
     [
-      maintainers: ["Danielle Tomlinson"],
+      maintainers: ["Danielle Lancashire"],
       licenses: ["MIT"],
-      links: %{"GitHub" => "https://github.com/dantoml/bees" }
+      links: %{"GitHub" => "https://github.com/endocrimes/bees" }
     ]
   end
 
